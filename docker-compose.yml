@@ -4,8 +4,7 @@ services:
     image: oznu/homebridge:latest
     container_name: homebridge
     restart: always
-    ports:
-      - "8581:8581"
+    network_mode: host
     environment:
       - TZ=Europe/Berlin
       - PGID=1000
